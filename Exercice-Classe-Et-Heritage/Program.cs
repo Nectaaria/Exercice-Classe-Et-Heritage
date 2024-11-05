@@ -19,6 +19,14 @@ namespace Exercice_Classe_Et_Heritage
             {
                 Console.WriteLine(B);
             }
+            Proprietaire Elodie = new Proprietaire("Menley", "Lune", new Bien[] { UneMaison, UnTerrain });
+            Console.WriteLine(Elodie);
+
+            Proprietaire Marc = new Proprietaire("Vernet", "Cassandre", new Bien[] { UneAutreMaison, UneDerniereMaison, UnAutreTerrain });
+            Console.WriteLine(Marc);
+
+            Proprietaire Leo = new Proprietaire("Chaves", "Julio", new Bien[0]);
+            Console.WriteLine(Leo);
         }
     }
 }

@@ -1,29 +1,38 @@
-﻿using System;
+﻿using Exercice_Classe_Et_Heritage;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercice_Classe_Et_Heritage
 {
     public class Proprietaire
     {
-        string Nom;
-        string Prenom;
-        List<Bien> Biens;
+        public string Nom;
+        public string Prenom;
+        public Bien[] Biens = new Bien[0];
 
-        public Proprietaire(string nom, string prenom)
+
+        public Proprietaire(string nom, string prenom, Bien[] biens)
         {
-            Nom = nom;
-            Prenom = prenom;
-            Biens = new List<Bien>();
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.Biens = biens;
         }
+
+        private string ListeBiens()
+        {
+            string listeBiens = "";
+            foreach (Bien B in this.Biens)
+            {
+                listeBiens += String.Format("- {0} {1} au {2}\n", B.GetType().Name == "Maison" ? "Une" : "Un", B.GetType().Name, B.Adresse);
+            }
+            return listeBiens;
+        }
+
         public override string ToString()
         {
-            string toString = String.Format("Nom = {0}\n", this.Nom);
-            toString += String.Format("Prénom = {0}\n", this.Prenom);
+            string toString = String.Format("{1} {0} {2}", this.Nom, this.Prenom, this.Biens?.Length != 0 ? "possède\n" : "ne possède aucun bien");
+            toString += ListeBiens();
             return toString;
         }
-
     }
 }

@@ -18,5 +18,12 @@ namespace Exercice_Classe_Et_Heritage
             Prenom = prenom;
             Biens = new List<Bien>();
         }
+        public override string ToString()
+        {
+            string toString = String.Format("Nom = {0}\n", this.Nom);
+            toString += String.Format("Prénom = {0}\n", this.Prenom);
+            return toString;
+        }
+
     }
 }

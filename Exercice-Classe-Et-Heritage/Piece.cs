@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Exercice_Classe_Et_Heritage
 {
-    internal class Piece
+    public class Piece
     {
-        int Superficie;
-        string Nom;
+        public int Superficie;
+        public string Nom;
         public Piece(int superficie, string nom)
         {
             Superficie = superficie;

@@ -8,5 +8,6 @@ namespace Exercice_Classe_Et_Heritage
 {
     internal class Piece
     {
+
     }
 }

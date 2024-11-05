@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExemplePOO
+namespace Exercice_Classe_Et_Heritage
 {
     public class Program
     {

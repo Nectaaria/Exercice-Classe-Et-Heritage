@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace ExemplePOO
+namespace Exercice_Classe_Et_Heritage
 {
     public class Terrain : Bien
     {
